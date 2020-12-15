@@ -83,9 +83,9 @@ LEFT OUTER JOIN Reservation
 -- 5. Write a query that returns all the rooms accommodating at least three guests and that are reserved on any date in April 2023.
 SELECT * FROM Room
 INNER JOIN Reservation ON Room.roomID = Reservation.roomID 
-WHERE (adults + children) >= 3 AND MONTH(start_date) = 4 AND YEAR(start_date) = 2023;
+WHERE maximun_occupancy >= 3 AND MONTH(start_date) = 4 AND YEAR(start_date) = 2023;
 
--- There is no result for this query!
+-- 9	301	No	2	4	199.99	10	2	9	Walter Holaway	1	0	2023-04-09 00:00:00	2023-04-13 00:00:00	799.96	9	9
 -- ===========================================================================================================================
 
 -- 6. Write a query that returns a list of all guest names and the number of reservations per guest, sorted starting with the guest with the most reservations and then by the guest's last name.
